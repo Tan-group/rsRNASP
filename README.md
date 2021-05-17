@@ -12,7 +12,7 @@ gcc rsRNASP.c -lm -o rsRNASP
 
 rsRNASP 1a9nR.pdb  energy.txt
 
-# output:
+# Output:
    
 # 1a9nR.pdb     -3055.902390
 
