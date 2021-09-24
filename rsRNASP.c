@@ -206,7 +206,7 @@ int main(int argc, char *argv[])
  
  FILE *FP;
  FP = fopen(argv[2],"a+");
- fprintf(FP,"%s     %lf\n", argv[1], energy);
+ fprintf(FP,"%s     %lf kBT\n", argv[1], energy);
  
 /////////////////////////////////////////////////////////
 
