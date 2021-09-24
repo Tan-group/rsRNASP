@@ -1,7 +1,7 @@
 
 # rsRNASP
 
-rsRNASP: A distance-dependent statistical potential based on residue separation for RNA 3D structure evaluation.
+rsRNASP: A residue-separation-based statistical potential for RNA 3D structure evaluation
 
 # Compilation and usage under linux
 
@@ -14,7 +14,7 @@ gcc rsRNASP.c -lm -o rsRNASP
 
 # Output:
    
-# 1a9nR.pdb     -3055.902390
+# 1a9nR.pdb     -3055.902390 kBT
 
 Note: the subfolder "data/" and compiled "rsRNASP" should be in the same folder.
 ```
