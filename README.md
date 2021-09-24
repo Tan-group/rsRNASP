@@ -1,7 +1,7 @@
 
 # rsRNASP
 
-rsRNASP: A residue-separation-based statistical potential for RNA 3D structure evaluation
+rsRNASP: A distance-dependent statistical potential based on residue separation for RNA 3D structure evaluation
 
 # Compilation and usage under linux
 
