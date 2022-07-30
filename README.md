@@ -19,10 +19,10 @@ Note: the subfolder "data/" and compiled file "rsRNASP" should be in the same fo
 
 # A usege example running the “example” dir
 ```
- ./rsRNASP 1a9nR.pdb  energy.txt
+# ./rsRNASP 1a9nR.pdb  energy.txt
 
- Output:
-   
+# Output:
+
  1a9nR.pdb     -3055.902390 kBT
 
 
