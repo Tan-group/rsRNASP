@@ -15,7 +15,7 @@ gcc rsRNASP.c -lm -o rsRNASP
 ./rsRNASP XXX.pdb  energy.txt
 
 Note: the subfolder "data/" and compiled file "rsRNASP" should be in the same folder.
-
+```
 
 # A usege example running the “example” dir
 
@@ -31,4 +31,4 @@ zjtan@whu.edu.cn
 
 References:
 [1] Tan YL, Wang X, Shi YZ, Zhang W, Tan ZJ. 2022. rsRNASP: A residue-separation-based statistical potential for RNA 3D structure evaluation. Biophys J. 121: 142-156.
-```
+
