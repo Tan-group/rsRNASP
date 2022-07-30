@@ -6,11 +6,12 @@ rsRNASP: A distance-dependent statistical potential based on residue separation 
 # Compilation and usage under linux
 
 ```
+# Compilation
 gcc rsRNASP.c -lm -o rsRNASP
-
+# Usage
 ./rsRNASP XXX.pdb  energy.txt
 
-# An example showed the example dir
+# A usege example running the “example” dir
 
  ./rsRNASP 1a9nR.pdb  energy.txt
 
@@ -19,7 +20,6 @@ gcc rsRNASP.c -lm -o rsRNASP
  1a9nR.pdb     -3055.902390 kBT
  
 Note: the subfolder "data/" and compiled file "rsRNASP" should be in the same folder.
-
 ```
 
 Please feel free to contact us if you have any question!
