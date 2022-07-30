@@ -7,8 +7,11 @@ rsRNASP: A distance-dependent statistical potential based on residue separation 
 
 ```
 # Compilation
+
 gcc rsRNASP.c -lm -o rsRNASP
+
 # Usage
+```
 ./rsRNASP XXX.pdb  energy.txt
 
 # A usege example running the “example” dir
