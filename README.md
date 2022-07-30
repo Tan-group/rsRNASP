@@ -8,13 +8,15 @@ rsRNASP: A distance-dependent statistical potential based on residue separation 
 ```
 gcc rsRNASP.c -lm -o rsRNASP
 
+./rsRNASP XXX.pdb  energy.txt
+
 # An example showed the example dir
 
 ./rsRNASP 1a9nR.pdb  energy.txt
 
-# Output:
+ Output:
    
-# 1a9nR.pdb     -3055.902390 kBT
+ 1a9nR.pdb     -3055.902390 kBT
 
 Note: the subfolder "data/" and compiled "rsRNASP" should be in the same folder.
 ```
