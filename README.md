@@ -10,14 +10,13 @@ gcc rsRNASP.c -lm -o rsRNASP
 
 ./rsRNASP XXX.pdb  energy.txt
 
-# # # An example showed the example dir
+# An example showed the example dir
 
  ./rsRNASP 1a9nR.pdb  energy.txt
 
  Output:
    
  1a9nR.pdb     -3055.902390 kBT
- 
  
 Note: the subfolder "data/" and compiled file "rsRNASP" should be in the same folder.
 
