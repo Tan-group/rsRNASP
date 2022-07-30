@@ -17,7 +17,7 @@ gcc rsRNASP.c -lm -o rsRNASP
 Note: the subfolder "data/" and compiled file "rsRNASP" should be in the same folder.
 ```
 
-# A usege example running the “example” dir
+# A usage example running the “example” dir
 ```
  ./rsRNASP 1a9nR.pdb  energy.txt
 
