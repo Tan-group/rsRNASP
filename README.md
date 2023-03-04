@@ -29,10 +29,10 @@ Note: the subfolder "data/" and compiled file "rsRNASP" should be in the same fo
 Please feel free to contact us if you have any question!
 zjtan@whu.edu.cn
 
-References:
+Reference:
 
 [1] Tan YL, Wang X, Shi YZ, Zhang W, Tan ZJ. 2022. rsRNASP: A residue-separation-based statistical potential for RNA 3D structure
-evaluation. Biophys J. 121: 142-156.
+evaluation. Biophys J. 121(1): 142-156.
 
 
 ```
