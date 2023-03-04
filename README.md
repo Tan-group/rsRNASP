@@ -31,7 +31,7 @@ zjtan@whu.edu.cn
 
 Reference:
 
-[1] Tan YL, Wang X, Shi YZ, Zhang W, Tan ZJ. 2022. rsRNASP: A residue-separation-based statistical potential for RNA 3D structure
+[1] Tan YL, Wang X, Shi YZ, Zhang W, & Tan ZJ. 2022. rsRNASP: A residue-separation-based statistical potential for RNA 3D structure
 evaluation. Biophys J. 121(1): 142-156.
 
 
