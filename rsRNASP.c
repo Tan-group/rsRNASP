@@ -172,23 +172,13 @@ int main(int argc, char *argv[])
         distance=sqrt((x[n1]-x[n2])*(x[n1]-x[n2])+(y[n1]-y[n2])*(y[n1]-y[n2])+(z[n1]-z[n2])*(z[n1]-z[n2]));
         if(abs(atoi(num[n1])-atoi(num[n2]))>k2 || strcmp(chain[n1], chain[n2])!=0)//long-ranged
         {
-         if(distance>0 && distance<=Rc2)
-          for(n5=0;n5<intervals2;n5++)
-           if(distance>n5*0.3 && distance<=(n5+1)*0.3)
-           {
-            energy2+=potential2[n3][n4][n5];
-            break;
-           }
+         if((int)(distance/0.3)<intervals2)
+          energy2+=potential2[n3][n4][(int)(distance/0.3)];
         }
         else if(abs(atoi(num[n1])-atoi(num[n2]))>k1 && abs(atoi(num[n1])-atoi(num[n2]))<=k2 && strcmp(chain[n1], chain[n2])==0)//short-ranged
         {
-         if(distance>0 && distance<=Rc1)
-          for(n5=0;n5<intervals1;n5++)
-           if(distance>n5*0.3 && distance<=(n5+1)*0.3)
-           {
-            energy1+=potential1[n3][n4][n5];
-            break;
-           }
+         if((int)(distance/0.3)<intervals1)
+          energy1+=potential1[n3][n4][(int)(distance/0.3)];
         }
         break;
        }
