@@ -10,14 +10,14 @@ rsRNASP: A distance-dependent statistical potential based on residue separation 
 
 gcc rsRNASP.c -lm -o rsRNASP      //  scoring one conformation
 or
-gcc rsRNASP-batch.c -lm -o rsRNASP-batch      // scoring a batch of conformations; updated in 2023.12.16 for improving the scoring efficiency
+gcc rsRNASP-batch.c -lm -o rsRNASP-batch      // scoring a batch of conformations; updated on December 16, 2023 for improving the scoring efficiency
 
 # Usage
 
 ./rsRNASP   XXX.pdb   energy.txt
 or
 ./rsRNASP-batch   ${path}   ${N}   energy_list.txt     // "path" is the folder path where the batch of conformations are located, and "N" is the number of conformations to be evaluated;
-                                                                                                     //  updated in 2023.12.16 for improving the scoring efficiency
+                                                                                                     //  updated on December 16, 2023 for improving the scoring efficiency
 
 Note: the subfolder "data/" and the compiled file "rsRNASP" or "rsRNASP-batch" should be in the same folder.
 ```
@@ -27,7 +27,7 @@ Note: the subfolder "data/" and the compiled file "rsRNASP" or "rsRNASP-batch" s
  ./rsRNASP 1a9nR.pdb  energy.txt
 or
  N=`ls *.pdb | wc -l`
- ./rsRNASP-batch   ./   ${N}   energy_list.txt     // updated in 2023.12.16 for improving the scoring efficiency
+ ./rsRNASP-batch   ./   ${N}   energy_list.txt     // updated on December 16, 2023 for improving the scoring efficiency
 
  Output:
 
