@@ -121,6 +121,15 @@ int main(int argc, char *argv[])
  }
  fclose(atom_type);
 
+//restype
+ char restype[4][2]={"A", "U", "C", "G"};
+
+ int n33, n44, nums[4], nume[4];
+ nums[0]=0; nume[0]=22;
+ nums[1]=22; nume[1]=42;
+ nums[2]=42; nume[2]=62;
+ nums[3]=62; nume[3]=85;
+
 /////////////////////////////////////////////////////////
 //potential
 /////////////////////////////////////////////////////////
@@ -159,31 +168,41 @@ int main(int argc, char *argv[])
  int n1, n2, n3, n4, n5;
  double distance, energy, energy1, energy2;
  
- energy=0.0;
- for(n1=0;n1<N;n1++)
-  for(n2=n1+1;n2<N;n2++)
-   if(strcmp(num[n1], num[n2])!=0 || strcmp(chain[n1], chain[n2])!=0)
-    for(n3=0;n3<85;n3++)
-     if(strcmp(type[n1],atomtype[n3])==0)
-     {
-      for(n4=0;n4<85;n4++)
-       if(strcmp(type[n2],atomtype[n4])==0)
-       {
-        distance=sqrt((x[n1]-x[n2])*(x[n1]-x[n2])+(y[n1]-y[n2])*(y[n1]-y[n2])+(z[n1]-z[n2])*(z[n1]-z[n2]));
-        if(abs(atoi(num[n1])-atoi(num[n2]))>k2 || strcmp(chain[n1], chain[n2])!=0)//long-ranged
+  energy=0.0; energy1=0.0; energy2=0.0;
+  for(n1=0;n1<N;n1++)
+   for(n2=n1+1;n2<N;n2++)
+    if(strcmp(num[n1], num[n2])!=0 || strcmp(chain[n1], chain[n2])!=0)
+     for(n33=0;n33<4;n33++)
+      if(strcmp(type2[n1],restype[n33])==0)
+      {
+       for(n3=nums[n33];n3<nume[n33];n3++)
+        if(strcmp(type[n1],atomtype[n3])==0)
         {
-         if((int)(distance/0.3)<intervals2)
-          energy2+=potential2[n3][n4][(int)(distance/0.3)];
+         for(n44=0;n44<4;n44++)
+          if(strcmp(type2[n2],restype[n44])==0)
+          {
+           for(n4=nums[n44];n4<nume[n44];n4++)
+            if(strcmp(type[n2],atomtype[n4])==0)
+            {
+             distance=sqrt((x[n1]-x[n2])*(x[n1]-x[n2])+(y[n1]-y[n2])*(y[n1]-y[n2])+(z[n1]-z[n2])*(z[n1]-z[n2]));
+             if(abs(atoi(num[n1])-atoi(num[n2]))>k2 || strcmp(chain[n1], chain[n2])!=0)//long-ranged
+             {
+              if((int)(distance/0.3)<intervals2)
+               energy2+=potential2[n3][n4][(int)(distance/0.3)];
+             }
+             else if(abs(atoi(num[n1])-atoi(num[n2]))>k1 && abs(atoi(num[n1])-atoi(num[n2]))<=k2 && strcmp(chain[n1], chain[n2])==0)//short-ranged
+             {
+              if((int)(distance/0.3)<intervals1)
+               energy1+=potential1[n3][n4][(int)(distance/0.3)];
+             }
+             break;
+            } 
+           break;       
+          }
+         break;
         }
-        else if(abs(atoi(num[n1])-atoi(num[n2]))>k1 && abs(atoi(num[n1])-atoi(num[n2]))<=k2 && strcmp(chain[n1], chain[n2])==0)//short-ranged
-        {
-         if((int)(distance/0.3)<intervals1)
-          energy1+=potential1[n3][n4][(int)(distance/0.3)];
-        }
-        break;
-       }
-     break;
-    }
+       break;
+      }
   
  int length;
 
@@ -221,6 +240,5 @@ int main(int argc, char *argv[])
 
   return 6;
 }
-
 
 
