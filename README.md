@@ -3,7 +3,7 @@
 
 rsRNASP: A distance-dependent statistical potential based on residue separation for RNA 3D structure evaluation
 
-The long-ranged potentials were set to a relatively high value of 30 kBT when the distance between atoms pairs is less than 3 Å for excluding those candidates with severe steric conflicts generated from RNA 3D structure prediction models; updated on July 23, 2024.
+The long-ranged potentials were set to a relatively high value of 30 kBT when the corresponding atom pairs within 3 Å for excluding those candidates with severe steric conflicts; updated on July 23, 2024.
 
 # Compilation and usage under linux
 
