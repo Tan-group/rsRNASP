@@ -1,2 +1,2 @@
 1a9nR.pdb     -3055.902390 kBT
-1h4sT.pdb     -7743.385764 kBT
+1h4sT.pdb     -7730.472072 kBT
