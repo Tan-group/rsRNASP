@@ -39,8 +39,7 @@ or
  1a9nR.pdb     -3055.902390 kBT
 
 ```
-Please feel free to contact us if you have any question!
-zjtan@whu.edu.cn
+If you have any questions about rsRNASP, please contact us by the email: zjtan@whu.edu.cn .
 
 Reference:                                      
 [1] Tan YL, Wang X, Shi YZ, Zhang W, & Tan ZJ. 2022. rsRNASP: A residue-separation-based statistical potential for RNA 3D structure
